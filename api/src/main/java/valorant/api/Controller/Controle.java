@@ -11,8 +11,8 @@ import valorant.api.Repository.RepositoryPersonagens;
 public class Controle {
     @Autowired
     private RepositoryPersonagens resPersonagens;
-    @GetMapping("/personagem")
-    public List<Personagens> adicionarPersonagem(){
+    @GetMapping("/Personagem")
+    public List<Personagens> getPersonagem(){
         return resPersonagens.findAll();
     }
 }
