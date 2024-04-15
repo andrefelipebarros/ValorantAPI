@@ -29,5 +29,5 @@ public class Controle {
         Personagens savePerson = repPersonagens.save(personagem);
         //Retorna se a Entidade(Personagem) foi salvo (OK) no Banco
         return ResponseEntity.ok(savePerson);
-    }
+}
 }
