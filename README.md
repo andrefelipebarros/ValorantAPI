@@ -48,6 +48,13 @@ Certifique-se de ter o Java JDK e o Maven instalados em sua máquina para execut
 ## Contribuição
 Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões para melhorar este projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
+### Contribuidores
+- [Contribuidor André Felipe (ALIPE)](https://github.com/andrefelipebarros)
+- [Contribuidor Rafael Sartorio](https://github.com/RafaelSartorio)
+- [Contribuidor Igor Araujo](https://github.com/IGR-cK)
+
+Esses são alguns dos incríveis colaboradores que contribuíram para o desenvolvimento deste projeto. `Se você também deseja contribuir`, sinta-se à vontade para enviar suas sugestões e melhorias `através de pull requests!`
+
 ## Licença
 Este projeto está licenciado sob a [MIT License](LICENSE).
 
