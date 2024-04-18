@@ -12,7 +12,7 @@ Certifique-se de ter o Java JDK e o Maven instalados em sua máquina para execut
 2. Importe o projeto em sua IDE de preferência (como IntelliJ IDEA ou Eclipse).
 3. Configure as credenciais do Firebase no arquivo `application.properties`:
 
-   ```
+   ```properties
    firebase.database.url=<URL_DO_SEU_BANCO_DE_DADOS>
    firebase.credentials.path=<CAMINHO_PARA_O_ARQUIVO_JSON_DE_CREDENCIAIS>
    ```
@@ -20,7 +20,7 @@ Certifique-se de ter o Java JDK e o Maven instalados em sua máquina para execut
 ## Endpoints Desenvolvidos.
 
 ### Jogadores
-- #### GET `localhost:8080/personagem`
+- #### GET `jlocalhost:8080/personagem`
   Retorna a lista de todos os jogadores cadastrados.
 
 - #### GET `localhost:8080/personagem/{id}`
@@ -29,8 +29,8 @@ Certifique-se de ter o Java JDK e o Maven instalados em sua máquina para execut
 - #### POST `localhost:8080/personagem`
   Cadastra um novo jogador. Os dados devem ser fornecidos no corpo da requisição no formato JSON.
 
-- #### PUT `localhost:8080/personagem/{id}`
-  Atualiza as informações de um jogador existente com o ID fornecido. Os novos dados devem ser fornecidos no corpo da requisição no formato JSON.
+<!-- - #### PUT `localhost:8080/personagem/{id}`
+  Atualiza as informações de um jogador existente com o ID fornecido. Os novos dados devem ser fornecidos no corpo da requisição no formato JSON.-->
 
 ### Partidas
 - #### GET `localhost:8080/partidas`
@@ -42,8 +42,8 @@ Certifique-se de ter o Java JDK e o Maven instalados em sua máquina para execut
 - #### POST `localhost:8080/partidas`
   Registra uma nova partida. Os dados devem ser fornecidos no corpo da requisição no formato JSON.
 
-- #### PUT `localhost:8080/partidas/{id}`
-  Atualiza as informações de uma partida existente com o ID fornecido. Os novos dados devem ser fornecidos no corpo da requisição no formato JSON.
+<!-- - #### PUT `localhost:8080/partidas/{id}`
+  Atualiza as informações de uma partida existente com o ID fornecido. Os novos dados devem ser fornecidos no corpo da requisição no formato JSON.-->
 
 ## Contribuição
 Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões para melhorar este projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
