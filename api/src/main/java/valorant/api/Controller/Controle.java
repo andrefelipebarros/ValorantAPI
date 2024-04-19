@@ -1,33 +1,33 @@
 package valorant.api.Controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
+import valorant.api.Dto.DtoPersonagens;
 import valorant.api.Model.Personagens;
-import valorant.api.Repository.RepositoryPersonagens;
+import valorant.api.Service.ServicePersonagens;
+
+import java.util.List;
 
 @RestController
 public class Controle {
     @Autowired
-    private RepositoryPersonagens repPersonagens;
+    private ServicePersonagens servicePersonagens;
 
     @GetMapping("/Personagem")
-    public List<Personagens> getPersonagem(){
-        return repPersonagens.findAll();
+    public List<Personagens> getPersonagem() {
+        return servicePersonagens.listAll();
     }
 
     @PostMapping("/Personagem")
-    public ResponseEntity<?> postPersonagem(@RequestBody Personagens personagem){
-        //Criando uma variável que armazena uma entidade(Personagem) 
-        //Sendo armazenada no repositório
-        Personagens savePerson = repPersonagens.save(personagem);
-        //Retorna se a Entidade(Personagem) foi salvo (OK) no Banco
-        return ResponseEntity.ok(savePerson);
-}
+    public ResponseEntity<Personagens> postPersonagem(@RequestBody DtoPersonagens dtoPersonagens) {
+        // Invoca o metodo desacoplado para salvar o personagem
+        // e emseguida retorna status CREATED (201)
+        servicePersonagens.save(dtoPersonagens);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
 }
