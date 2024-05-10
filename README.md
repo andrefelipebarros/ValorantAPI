@@ -2,20 +2,23 @@
 # API Valorant
 
 ## Descrição
-A API Valorant é um projeto desenvolvido em Spring Boot, que oferece endpoints para acessar e gerenciar dados relacionados ao jogo VALORANT. Este projeto utiliza o Maven como gerenciador de dependências e o Firebase como banco de dados.
+A API Valorant é um projeto desenvolvido em Spring Boot que oferece endpoints para acessar e gerenciar dados relacionados ao jogo VALORANT. Este projeto usa Maven como gerenciador de dependências e PostgreSQL como banco de dados.
 
 ## Requisitos
-Certifique-se de ter o Java JDK e o Maven instalados em sua máquina para executar o projeto localmente. Além disso, é necessário configurar uma conta no Firebase e obter as credenciais de serviço para conectar o projeto à sua base de dados.
+Certifique-se de ter o Java JDK e o Maven instalados em sua máquina para executar o projeto localmente. Também é necessário ter um banco de dados PostgreSQL em execução e as credenciais de acesso correspondentes para conectar o projeto ao banco de dados.
 
 ## Configuração
 1. Clone este repositório em sua máquina local.
 2. Importe o projeto em sua IDE de preferência (como IntelliJ IDEA ou Eclipse).
-3. Configure as credenciais do Firebase no arquivo `application.properties`:
+3. Configure as informações do banco de dados PostgreSQL no arquivo `application.properties`:
 
    ```properties
-   firebase.database.url=<URL_DO_SEU_BANCO_DE_DADOS>
-   firebase.credentials.path=<CAMINHO_PARA_O_ARQUIVO_JSON_DE_CREDENCIAIS>
+   spring.datasource.url=jdbc:postgresql://<HOST>:<PORT>/<NOME_DO_BANCO>
+   spring.datasource.username=<SEU_USUARIO>
+   spring.datasource.password=<SUA_SENHA>
+   spring.datasource.driver-class-name=org.postgresql.Driver
    ```
+---
 
 ## Endpoints Desenvolvidos.
 
@@ -44,7 +47,9 @@ Certifique-se de ter o Java JDK e o Maven instalados em sua máquina para execut
 
 <!-- - #### PUT `localhost:8080/partidas/{id}`
   Atualiza as informações de uma partida existente com o ID fornecido. Os novos dados devem ser fornecidos no corpo da requisição no formato JSON.-->
-
+ 
+---
+ 
 ## Contribuição
 Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões para melhorar este projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
