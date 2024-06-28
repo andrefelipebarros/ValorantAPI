@@ -1,6 +1,11 @@
 ---
-# API Valorant
+<div align="center">
+   
+#  Valorant API 
 
+</div>
+
+---
 ## Descrição
 A API Valorant é um projeto desenvolvido em Spring Boot que oferece endpoints para acessar e gerenciar dados relacionados ao jogo VALORANT. Este projeto usa Maven como gerenciador de dependências e PostgreSQL como banco de dados.
 
