@@ -1,5 +1,5 @@
 package valorant.api.Dto;
 
-public record DtoUsuarios(String email, String hashSenha) {
-    
+public record DtoUsuarios(String nome, String email, String senha) {
+
 }

@@ -26,7 +26,7 @@ public class PersonagensControle {
     @PostMapping("/Personagem")
     public ResponseEntity<Personagens> postPersonagem(@RequestBody DtoPersonagens dtoPersonagens) {
         // Invoca o metodo desacoplado para salvar o personagem
-        // e emseguida retorna status CREATED (201)
+        // e em seguida retorna status CREATED (201)
         servicePersonagens.save(dtoPersonagens);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
