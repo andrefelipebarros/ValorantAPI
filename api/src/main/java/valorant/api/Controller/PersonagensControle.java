@@ -14,7 +14,7 @@ import valorant.api.Service.ServicePersonagens;
 import java.util.List;
 
 @RestController
-public class Controle {
+public class PersonagensControle {
     @Autowired
     private ServicePersonagens servicePersonagens;
 
@@ -26,7 +26,7 @@ public class Controle {
     @PostMapping("/Personagem")
     public ResponseEntity<Personagens> postPersonagem(@RequestBody DtoPersonagens dtoPersonagens) {
         // Invoca o metodo desacoplado para salvar o personagem
-        // e emseguida retorna status CREATED (201)
+        // e em seguida retorna status CREATED (201)
         servicePersonagens.save(dtoPersonagens);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
