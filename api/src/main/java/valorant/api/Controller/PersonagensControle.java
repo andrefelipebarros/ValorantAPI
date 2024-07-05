@@ -14,7 +14,7 @@ import valorant.api.Service.ServicePersonagens;
 import java.util.List;
 
 @RestController
-public class Controle {
+public class PersonagensControle {
     @Autowired
     private ServicePersonagens servicePersonagens;
 
